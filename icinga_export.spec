@@ -8,7 +8,7 @@ License:	GPLv2+
 URL:		https://github.com/varesa/icinga_export
 Source0: 	%{name}-%{version}.tar.gz
 
-Requires: httpd mod_wsgi
+Requires: httpd mod_wsgi python python-flask mysql-connector-python
 
 %description
 
