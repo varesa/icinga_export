@@ -1,5 +1,5 @@
 Name:		icinga_export
-Version:	1.0.3
+Version:	1.0.4
 Release:	1%{?dist}
 BuildArch:	noarch
 Summary:	A read only interface for data from Icinga2
