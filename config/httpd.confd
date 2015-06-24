@@ -4,9 +4,9 @@ WSGISocketPrefix /var/run/wsgi
     ServerName icinga_export.esav.dy.fi
 
     WSGIDaemonProcess app user=apache group=apache threads=5
-    WSGIScriptAlias / /var/www/dnsgui/app.wsgi
+    WSGIScriptAlias / /var/www/icinga_export/app.wsgi
 
-    <Directory /var/www/dnsgui>
+    <Directory /var/www/icinga_export>
         WSGIProcessGroup app
         WSGIApplicationGroup %{GLOBAL}
         Order deny,allow
