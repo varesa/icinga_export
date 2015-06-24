@@ -1,5 +1,5 @@
 Name:		icinga_export
-Version:	1.0.2
+Version:	1.0.3
 Release:	1%{?dist}
 BuildArch:	noarch
 Summary:	A read only interface for data from Icinga2
@@ -21,6 +21,7 @@ Requires: httpd mod_wsgi
 install -m 644 -D config/httpd.confd %{buildroot}/etc/httpd/conf.d/icinga_export.conf
 
 install -m 755 -d %{buildroot}/var/www/icinga_export
+install -m 644 app.wsgi %{buildroot}/var/www/icinga_export/app.wsgi
 find ./ -name "*.py" -exec install -m 644 {} %{buildroot}/var/www/icinga_export/{} \;
 
 %files
