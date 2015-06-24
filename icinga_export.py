@@ -1,10 +1,8 @@
 import mysql.connector
 from flask import Flask, jsonify
-import json
 
 app = Flask(__name__)
 dbc = mysql.connector.connect(user='icinga_read', password='Ax1sGW', host='192.168.0.202', database='icinga')
-
 
 @app.route('/services')
 def view_services():
