@@ -1,7 +1,7 @@
 WSGISocketPrefix /var/run/wsgi
 
 <VirtualHost *:80>
-    ServerName icinga_export.esav.dy.fi
+    ServerName icinga-export.esav.dy.fi
 
     WSGIDaemonProcess app user=apache group=apache threads=5
     WSGIScriptAlias / /var/www/icinga_export/app.wsgi
