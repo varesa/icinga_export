@@ -23,7 +23,6 @@ def view_services():
     d = []
 
     for row in result:
-        print(str(row[i_host_name]) + "-" + str(row[i_service_name] + ": " + str(row[i_service_state])))
         d.append({'host_name': row[i_host_name], 'service_name': row[i_service_name], 'service_state': row[i_service_state]})
     return jsonify(services=d)
 
