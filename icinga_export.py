@@ -1,11 +1,17 @@
 import mysql.connector
 from flask import Flask, jsonify
 
+def connect():
+    return mysql.connector.connect(user='icinga_read', password='Ax1sGW', host='192.168.0.202', database='icinga')
+
 app = Flask(__name__)
-dbc = mysql.connector.connect(user='icinga_read', password='Ax1sGW', host='192.168.0.202', database='icinga')
+dbc = connect()
 
 @app.route('/services')
 def view_services():
+    if not dbc.is_connected():
+        dbc.connect()
+
     cursor = dbc.cursor()
     cursor.execute("SELECT "
                    "icinga_hosts.display_name AS host_name, "
